@@ -14,6 +14,52 @@ const NavBar = ({ theme, toggleTheme }) => {
   };
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+
+   const links = (
+    <>      
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `text-[18px] ${
+              isActive
+                ? "underline underline-offset-8 decoration-2 decoration-primary"
+                : ""
+            }`
+          }
+        >
+      Home</NavLink>
+      
+         <NavLink
+            to="/groups"
+            className={({ isActive }) =>
+              `text-[18px] ${
+                isActive
+                  ? "underline underline-offset-8 decoration-2 decoration-primary"
+                  : ""
+              }`
+            }
+          >All Groups</NavLink>
+
+      {user && (
+        <>
+          
+             <NavLink
+            to="/Dashboard/overView"
+            className={({ isActive }) =>
+              `text-[18px] ${
+                isActive
+                  ? "underline underline-offset-8 decoration-2 decoration-primary"
+                  : ""
+              }`
+            }
+          >DashBoard</NavLink>
+          
+        </>
+      )}
+    </>
+  );
+
+
   return (
     <div className="w-11/12 mx-auto my-3 bg-gradient-to-r from-blue-100 to-slate-100 shadow-md hover:shadow-sm transition-shadow p-2 font-semibold">
       <div className="flex justify-between items-center">
@@ -35,58 +81,7 @@ const NavBar = ({ theme, toggleTheme }) => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex justify-center items-center gap-6">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `text-[18px] ${
-                isActive
-                  ? "underline underline-offset-8 decoration-2 decoration-primary"
-                  : ""
-              }`
-            }
-          >
-            Home
-          </NavLink>
-          {
-            <>
-              <NavLink
-                to="/groups"
-                className={({ isActive }) =>
-                  `text-[18px] ${
-                    isActive
-                      ? "underline underline-offset-8 decoration-2 decoration-primary"
-                      : ""
-                  }`
-                }
-              >
-                All Groups
-              </NavLink>
-              <NavLink
-                to="/createGroup"
-                className={({ isActive }) =>
-                  `text-[18px] ${
-                    isActive
-                      ? "underline underline-offset-8 decoration-2 decoration-primary"
-                      : ""
-                  }`
-                }
-              >
-                Create Group
-              </NavLink>
-              <NavLink
-                to="/myGroups"
-                className={({ isActive }) =>
-                  `text-[18px] ${
-                    isActive
-                      ? "underline underline-offset-8 decoration-2 decoration-primary"
-                      : ""
-                  }`
-                }
-              >
-                My Groups
-              </NavLink>
-            </>
-          }
+         {links}
         </div>
 
         {/* Desktop User Auth */}
@@ -136,59 +131,7 @@ const NavBar = ({ theme, toggleTheme }) => {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden mt-3 flex flex-col gap-3 bg-white p-4 rounded shadow">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `text-[18px] ${
-                isActive
-                  ? "underline underline-offset-8 decoration-2 decoration-primary"
-                  : ""
-              }`
-            }
-            onClick={() => setIsOpen(false)}
-          >
-            Home
-          </NavLink>
-          {user && (
-            <>
-              <NavLink
-                to="/groups"
-                className={({ isActive }) =>
-                  `text-[18px] ${
-                    isActive
-                      ? "underline underline-offset-8 decoration-2 decoration-primary"
-                      : ""
-                  }`
-                }
-              >
-                All Groups
-              </NavLink>
-              <NavLink
-                to="/createGroup"
-                className={({ isActive }) =>
-                  `text-[18px] ${
-                    isActive
-                      ? "underline underline-offset-8 decoration-2 decoration-primary"
-                      : ""
-                  }`
-                }
-              >
-                Create Group
-              </NavLink>
-              <NavLink
-                to="/myGroups"
-                className={({ isActive }) =>
-                  `text-[18px] ${
-                    isActive
-                      ? "underline underline-offset-8 decoration-2 decoration-primary"
-                      : ""
-                  }`
-                }
-              >
-                My Groups
-              </NavLink>
-            </>
-          )}
+{links}
           <div className="flex items-center gap-3 mt-3">
             {user ? (
               <>

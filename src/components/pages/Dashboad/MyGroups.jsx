@@ -1,7 +1,6 @@
 import React, { Suspense, useEffect } from "react";
 import { useState } from "react";
 import { auth } from "../../../firebase/firebase.config";
-import HobbyGroup from "./HobbyGroup";
 import { Link, useLoaderData } from "react-router";
 import toast from "react-hot-toast";
 import { format } from "date-fns";
