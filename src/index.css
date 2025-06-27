@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: dark --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #3b82f6; /* Blue-500: Professional, trustworthy */
+  --color-secondary: #f97316; /* Orange-500: Energetic, engaging */
+  --color-accent: #1e293b; /* Slate-500: Neutral, soft contrast */
+  --color-base-200: #f8fafc; /* Slate-50: Very light background */
+  --color-base-300: #1e293b; /* Slate-200: Light, subtle borders */
+
+  /* background-image: linear-gradient(
+    to right,
+    #c7d2fe,
+    #e9d5ff
+  ); indigo-100 to purple-100 */
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-dosis {
+  font-family: "Dosis", sans-serif;
+}
+
+a.active {
+  @apply underline;
+}
+
+label {
+  @apply font-bold;
+}
+/* https://i.ibb.co/LDT9xbcb/user4.png
+https://i.ibb.co/Xh88xrW/user3.png
+https://i.ibb.co/JRSqGMCc/user2.png
+https://i.ibb.co/4wDRpJqh/user1.png  */
