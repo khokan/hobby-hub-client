@@ -15,10 +15,10 @@ const Home = () => {
         <section className=" p-5">
           <TypewriterEffect />
         </section>
-        <section className="mb-5">
+        <section className="mb-3">
           <HobbyHubSlider />
         </section>
-        <section className="mb-5">
+        <section className="mb-3">
           <Featured />
         </section>
         <section className="py-16 bg-base-200 text-center mb-4">
@@ -29,7 +29,7 @@ const Home = () => {
             Can't find your tribe? Create a group and invite fellow enthusiasts
             to join your journey.
           </p>
-          <a href="/creategroup" className="btn btn-primary">
+          <a href="/dashboard/createGroup" className="btn btn-primary">
             Create Group
           </a>
         </section>

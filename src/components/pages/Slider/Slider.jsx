@@ -63,7 +63,7 @@ const HobbyHubSlider = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+    <div className=" mx-auto px-4 sm:px-6 lg:px-8">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -90,11 +90,6 @@ const HobbyHubSlider = () => {
               <p className="text-lg text-accent max-w-2xl">
                 {slide.description}
               </p>
-              {slide.id === 2 && (
-                <button className="mt-8 px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors">
-                  Start Personalization Quiz
-                </button>
-              )}
             </div>
           </SwiperSlide>
         ))}
