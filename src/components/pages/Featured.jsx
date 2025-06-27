@@ -1,7 +1,7 @@
 import { format, startOfToday } from "date-fns";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 
 const Featured = () => {
   const userData = useLoaderData();
@@ -42,7 +42,11 @@ const Featured = () => {
                   <span className="font-medium">Start Date:</span>{" "}
                   {product.startDate}
                 </div>
-                <button className="btn btn-sm btn-primary">Add to Cart</button>
+                <Link to={`/groups/${product._id}`}>
+                  <button className=" btn btn-primary px-4 py-2 rounded">
+                    Details
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

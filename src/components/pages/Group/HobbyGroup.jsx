@@ -28,7 +28,7 @@ const HobbyGroup = ({ group }) => {
           </div>
           <Link to={`/groups/${group._id}`}>
             <button className=" btn btn-primary px-4 py-2 rounded">
-              See More
+              Details
             </button>
           </Link>
         </div>
