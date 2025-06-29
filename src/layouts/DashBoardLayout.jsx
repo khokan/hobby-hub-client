@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router"; // fix: should be from react-router-dom
+import { NavLink, Outlet } from "react-router"; // fixed import
+import { FaHome, FaChartPie, FaPlusCircle, FaUsers } from "react-icons/fa"; // import icons
 
 const DashBoardLayout = () => {
   return (
@@ -44,20 +45,30 @@ const DashBoardLayout = () => {
       {/* Sidebar */}
       <div className="drawer-side">
         <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+        <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content space-y-2 text-[16px] font-medium">
           <li>
             <NavLink to="/" end>
+              <FaHome className="mr-2" />
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dashboard/overview">Overview</NavLink>
+            <NavLink to="/dashboard/overview">
+              <FaChartPie className="mr-2" />
+              Overview
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/dashboard/createGroup">Create Group</NavLink>
+            <NavLink to="/dashboard/createGroup">
+              <FaPlusCircle className="mr-2" />
+              Create Group
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/dashboard/myGroups">My Groups</NavLink>
+            <NavLink to="/dashboard/myGroups">
+              <FaUsers className="mr-2" />
+              My Groups
+            </NavLink>
           </li>
         </ul>
       </div>
