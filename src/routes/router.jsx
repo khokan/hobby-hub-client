@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         loader: () =>
           fetch("https://b11a10-server-side-khokan77.vercel.app/groups"),
         hydrateFallbackElement: (
-          <div className="text-center">
+          <div className="text-center pt-20">
             <span className="loading loading-bars loading-xl"></span>{" "}
           </div>
         ),

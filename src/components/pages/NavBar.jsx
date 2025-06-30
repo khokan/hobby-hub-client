@@ -39,7 +39,7 @@ const NavBar = ({ theme, toggleTheme }) => {
   );
 
   return (
-    <div className="w-11/12 mx-auto my-3 p-2 font-semibold shadow-md bg-gradient-to-r from-blue-100 to-slate-100">
+    <div className="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-11/12 p-2 font-semibold shadow-md bg-gradient-to-r from-blue-100 to-slate-100">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 font-bold text-xl">
